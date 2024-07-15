@@ -1,0 +1,1466 @@
+INFO - 2024-04-23 14:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 14:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 14:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 14:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 14:50:49 --> mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\REZA\app\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+#8 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+#11 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 14:50:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 6 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:50:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 8 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:50:49 --> [Caused by] mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 9 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 14:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 14:51:47 --> mysqli_sql_exception: Table 'rekammedis.penerimaan_alat' doesn't exist in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\REZA\app\Models\PenerimaanAlatModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\REZA\app\Controllers\PersediaanAlat.php(39): App\Models\PenerimaanAlatModel->getPenerimaanByAlatId('1')
+#8 C:\xampp\htdocs\REZA\app\Controllers\PersediaanAlat.php(27): App\Controllers\PersediaanAlat->getPersediaanAlatData()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\PersediaanAlat->index()
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanAlat))
+#11 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 14:51:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan_alat' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = :alat_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PenerimaanAlatModel.php(15): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\PersediaanAlat.php(39): App\Models\PenerimaanAlatModel->getPenerimaanByAlatId('1')
+ 6 APPPATH\Controllers\PersediaanAlat.php(27): App\Controllers\PersediaanAlat->getPersediaanAlatData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanAlat->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanAlat))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:51:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan_alat' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = :alat_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\PenerimaanAlatModel.php(15): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\PersediaanAlat.php(39): App\Models\PenerimaanAlatModel->getPenerimaanByAlatId('1')
+ 8 APPPATH\Controllers\PersediaanAlat.php(27): App\Controllers\PersediaanAlat->getPersediaanAlatData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanAlat->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanAlat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:51:47 --> [Caused by] mysqli_sql_exception: Table 'rekammedis.penerimaan_alat' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan_alat`
+WHERE `alat_id` = :alat_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\PenerimaanAlatModel.php(15): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\PersediaanAlat.php(39): App\Models\PenerimaanAlatModel->getPenerimaanByAlatId('1')
+ 9 APPPATH\Controllers\PersediaanAlat.php(27): App\Controllers\PersediaanAlat->getPersediaanAlatData()
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanAlat->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanAlat))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 14:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 14:51:53 --> mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\REZA\app\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+#8 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+#11 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 14:51:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 6 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:51:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 8 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:51:53 --> [Caused by] mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 9 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 14:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 14:52:17 --> mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\REZA\app\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+#8 C:\xampp\htdocs\REZA\app\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+#11 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 14:52:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 6 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:52:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 8 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 14:52:17 --> [Caused by] mysqli_sql_exception: Table 'rekammedis.penerimaan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penerimaan`
+WHERE `obat_id` = :obat_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\PenerimaanModel.php(15): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\PersediaanObat.php(39): App\Models\PenerimaanModel->getPenerimaanByObatId('1')
+ 9 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 14:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 14:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 15:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:02:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 15:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:03:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 15:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 15:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:04:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:05:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 15:06:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:06:20 --> ErrorException: Undefined array key "jumlah_penerimaan"
+in APPPATH\Views\persediaan_obat\index.php on line 39.
+ 1 APPPATH\Views\persediaan_obat\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_penerimaan"', 'C:\\xampp\\htdocs\\REZA\\app\\Views\\persediaan_obat\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\persediaan_obat\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('persediaan_obat/index', [], true)
+ 5 APPPATH\Views\layout\v_content.php(3): view('persediaan_obat/index')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content')
+10 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\PersediaanObat.php(29): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:07:51 --> ErrorException: Undefined array key "jumlah_penerimaan"
+in APPPATH\Views\persediaan_obat\index.php on line 40.
+ 1 APPPATH\Views\persediaan_obat\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_penerimaan"', 'C:\\xampp\\htdocs\\REZA\\app\\Views\\persediaan_obat\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\persediaan_obat\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('persediaan_obat/index', [], true)
+ 5 APPPATH\Views\layout\v_content.php(3): view('persediaan_obat/index')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content')
+10 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\REZA\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\PersediaanObat.php(29): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 15:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 15:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 15:08:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 23:25:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 23:28:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:28:57 --> mysqli_sql_exception: Column 'kode_alat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:28:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:28:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:28:57 --> [Caused by] mysqli_sql_exception: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:29:11 --> mysqli_sql_exception: Column 'kode_alat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:29:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:29:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:29:11 --> [Caused by] mysqli_sql_exception: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:30:55 --> mysqli_sql_exception: Column 'alat_id' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:30:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:30:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:30:55 --> [Caused by] mysqli_sql_exception: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:33:07 --> mysqli_sql_exception: Column 'kode_alat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:33:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:33:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'10\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'10\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:33:07 --> [Caused by] mysqli_sql_exception: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'10\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'10\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'10\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:34:19 --> mysqli_sql_exception: Column 'nama_alat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:34:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'nama_alat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'nama_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:19 --> [Caused by] mysqli_sql_exception: Column 'nama_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:34:36 --> mysqli_sql_exception: Column 'alat_id' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:34:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:36 --> [Caused by] mysqli_sql_exception: Column 'alat_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:34:56 --> mysqli_sql_exception: Column 'jumlah_penerimaan' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:34:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'jumlah_penerimaan' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'jumlah_penerimaan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:34:56 --> [Caused by] mysqli_sql_exception: Column 'jumlah_penerimaan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_penerimaan`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaanalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaanalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaanalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:38:49 --> mysqli_sql_exception: Column 'kode_alat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Pemakaianalat.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Pemakaianalat->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemakaianalat))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:38:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_pemakaian:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Pemakaianalat.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pemakaianalat->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemakaianalat))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:38:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (\'1\', NULL, NULL, \'20\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (\'1\', NULL, NULL, \'20\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_pemakaian:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Pemakaianalat.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pemakaianalat->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemakaianalat))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:38:49 --> [Caused by] mysqli_sql_exception: Column 'kode_alat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (\'1\', NULL, NULL, \'20\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (\'1\', NULL, NULL, \'20\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (\'1\', NULL, NULL, \'20\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemakaian_alat` (`alat_id`, `kode_alat`, `nama_alat`, `jumlah_pemakaian`, `tanggal`) VALUES (:alat_id:, :kode_alat:, :nama_alat:, :jumlah_pemakaian:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pemakaianalat.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pemakaianalat->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemakaianalat))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 23:39:39 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 23:40:01 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\PersediaanObat.php on line 46.
+ 1 APPPATH\Controllers\PersediaanObat.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\PersediaanObat.php', 46)
+ 2 APPPATH\Controllers\PersediaanObat.php(27): App\Controllers\PersediaanObat->getPersediaanObatData()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersediaanObat->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanObat))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:41:44 --> mysqli_sql_exception: Column 'kode_obat' cannot be null in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\REZA\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\REZA\app\Controllers\Penerimaan.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Penerimaan->simpan()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:41:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_obat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (:obat_id:, :kode_obat:, :nama_obat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Penerimaan.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaan->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:41:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_obat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (:obat_id:, :kode_obat:, :nama_obat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Penerimaan.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaan->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:41:44 --> [Caused by] mysqli_sql_exception: Column 'kode_obat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (\'1\', NULL, NULL, \'100\', \'2024-04-23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penerimaan` (`obat_id`, `kode_obat`, `nama_obat`, `jumlah_penerimaan`, `tanggal`) VALUES (:obat_id:, :kode_obat:, :nama_obat:, :jumlah_penerimaan:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Penerimaan.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penerimaan->simpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:43:26 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', NULL, NULL)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:43:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:43:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:43:26 --> [Caused by] mysqli_sql_exception: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:44:17 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', NULL, NULL)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:44:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:44:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:44:17 --> [Caused by] mysqli_sql_exception: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 23:45:13 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', NULL, NULL)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:45:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:45:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:45:13 --> [Caused by] mysqli_sql_exception: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:46:32 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', NULL, NULL)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:46:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:46:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:46:32 --> [Caused by] mysqli_sql_exception: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+ERROR - 2024-04-23 23:47:21 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\REZA\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\REZA\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\REZA\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\REZA\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\REZA\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\REZA\app\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', NULL, NULL)
+#8 C:\xampp\htdocs\REZA\system\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+#9 C:\xampp\htdocs\REZA\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp\htdocs\REZA\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\REZA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\REZA\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-23 23:47:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:47:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:47:21 --> [Caused by] mysqli_sql_exception: Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Alat_Medis`
+WHERE YEAR(tanggal) = :YEAR(tanggal):', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(68): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 23:56:05 --> BadMethodCallException: Call to undefined method App\Models\PenerimaanModel::getPenerimaanByAlatId
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Laporan.php(61): CodeIgniter\Model->__call('getPenerimaanByAlatId', [...])
+ 2 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+CRITICAL - 2024-04-23 23:56:36 --> ErrorException: Undefined array key "obat_id"
+in APPPATH\Controllers\Laporan.php on line 65.
+ 1 APPPATH\Controllers\Laporan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "obat_id"', 'C:\\xampp\\htdocs\\REZA\\app\\Controllers\\Laporan.php', 65)
+ 2 APPPATH\Controllers\Laporan.php(49): App\Controllers\Laporan->getPersediaanAlatData('2024', null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Laporan->alat()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\REZA\\public\\index.php')
+INFO - 2024-04-23 23:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 23:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
